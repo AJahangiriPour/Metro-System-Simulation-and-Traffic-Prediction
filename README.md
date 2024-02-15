@@ -6,7 +6,7 @@ This Python code simulates the daily passenger flow within a metro system repres
 
 ![Example Image](output.png)
 
-<img src="output.png" alt="Example Image" width="200"/>
+<img src="output.png" alt="Example Image" width="400"/>
 
 ## Dependencies
 - `numpy`
