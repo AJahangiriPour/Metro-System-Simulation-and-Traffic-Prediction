@@ -1,50 +1,37 @@
-# Metro System Traffic Simulation
+# Metro System Simulation and Traffic Prediction
+As a Machine Learning Project, CE Department of Amirkabir University of Technology, Fall 2021
 
-This Python code simulates the daily traffic in a metro system represented as a directed graph. The graph represents metro lines and stations, and the simulation generates data on passenger arrivals, departures, and line traffic for each station over multiple days.
+## Overview
+This Python code simulates the daily passenger flow within a metro system represented as a directed graph. The simulation generates a dataset capturing the in-flow, out-flow, and line traffic at each station over a specified period. Additionally, the code demonstrates the use of machine learning models, specifically Linear Regression and AdaBoostRegressor, to predict passenger in-flow, out-flow, and line traffic in the metro system.
 
 ## Dependencies
-- NumPy
-- Pandas
-- NetworkX
-- Matplotlib
-- Scikit-learn
+- `numpy`
+- `pandas`
+- `networkx`
+- `matplotlib`
+- `scikit-learn`
 
-## Code Overview
+Make sure to install the required dependencies before running the code.
 
-1. **Graph Construction:**
-   - Creates a directed graph representing metro lines and stations.
-   - Nodes represent stations, and edges represent metro lines with distinct colors.
+```bash
+pip install numpy pandas networkx matplotlib scikit-learn
+```
 
-2. **Station Positions:**
-   - Sets positions for nodes in the graph for visualization purposes.
-
-3. **Station Rates:**
-   - Assigns random rates for passenger arrivals and departures for each station.
-
-4. **Simulation:**
-   - Simulates daily traffic for each station, considering passenger arrivals, departures, and line traffic.
-
-5. **Dataframe Merging:**
-   - Merges simulation results for each day into a single dataframe.
-
-6. **Visualization:**
-   - Plots input, output, and line_after values over time for selected stations on the first day.
-
-7. **One-Hot Encoding:**
-   - Converts station names into one-hot encoded columns.
-
-8. **Linear Regression Models:**
-   - Fits linear regression models to predict passenger arrivals (in) and departures (out) for a specific station and time.
-
-9. **AdaBoost Regression Model:**
-   - Fits an AdaBoost regression model to predict the line_after values, representing the traffic on metro lines.
-
-10. **System Traffic Analysis:**
-    - Analyzes the average in and out rates for each station.
+## Code Structure
+- The metro system is represented as a directed graph using the NetworkX library.
+- Station positions are set, and edges between stations represent metro lines with distinct colors.
+- Station rates are defined based on in-degree, out-degree, and the existence of multiple lines.
+- The simulation generates a dataset capturing daily passenger flow, considering station connectivity and line traffic.
+- The code visualizes input, output, and line traffic for selected stations on the first day.
+- One-hot encoding is applied to station names for machine learning model input.
+- Linear Regression models are trained to predict passenger in-flow and out-flow.
+- An AdaBoostRegressor model is trained to predict line traffic.
+- Examples of predictions for specific times and stations are provided.
+- The average in-flow and out-flow rates for each station are estimated.
 
 ## Usage
-1. Install the required dependencies using `pip install numpy pandas networkx matplotlib scikit-learn`.
-2. Copy and paste the code into a Python script or Jupyter notebook.
-3. Run the script or notebook to simulate and analyze metro system traffic.
+1. Install the required dependencies.
+2. Run the code to simulate metro system traffic and train machine learning models.
+3. Analyze the visualizations and model predictions.
 
-Feel free to modify the code and parameters to explore different scenarios or improve the simulation.
+Feel free to customize the code for your specific metro system or use case.
