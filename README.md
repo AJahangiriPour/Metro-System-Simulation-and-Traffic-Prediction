@@ -3,6 +3,7 @@ As a Machine Learning Project, CE Department of Amirkabir University of Technolo
 
 ## Overview
 This Python code simulates the daily passenger flow within a metro system represented as a directed graph. The simulation generates a dataset capturing the in-flow, out-flow, and line traffic at each station over a specified period. Additionally, the code demonstrates the use of machine learning models, specifically Linear Regression and AdaBoostRegressor, to predict passenger in-flow, out-flow, and line traffic in the metro system.
+
 ![Example Image](output.png)
 
 ## Dependencies
